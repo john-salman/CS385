@@ -1,0 +1,33 @@
+ctrl-a + ?                    - help
+
+ctrl-a + \                    - kill byobu
+shift-f6                      - detach without kill
+ctrl-a + ctrl-d               - detach without kill
+
+// Windows management
+ctrl-a + c                    - create new window
+ctrl-a + k                    - kill current window
+ctrl-a + "                    - choose window from list
+ctrl-a + s                    - choose window from list
+ctrl-a + ctrl-space           - next window
+ctrl-a + ctrl-n               - next window
+ctrl-a + ctrl-c               - next window + cd to current path  
+alt+left, alt-right           - switch windows
+
+// Panels management
+ctrl-a + tab                  - next panel
+ctrl-a + %                    - split current panel by vertical
+ctrl-a + |                    - split current panel by horizontal
+
+shift+left,
+shift+right,
+shift+up,
+shift+down                    - switch panels
+
+alt+shift-left,
+alt+shift-right,
+alt+shift-up,
+alt+shift-down                - resize panels
+
+// Scroll page buffer
+alt-pgUp, alt-pgDown          - scroll buffer
