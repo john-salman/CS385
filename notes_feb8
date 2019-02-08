@@ -1,0 +1,89 @@
+byobu
+ctrl-a
+1
+enter
+
+sudo -s
+
+apt-cache search hwloc   #(hardware location) we need dev
+apt-get install libhwloc-dev
+
+apt-get install cmake
+
+ctrl-a c # new byobu screen/terminal
+
+
+tar -jxvf #j bz2 v verbose...
+#to unpack the tars from canvas
+
+cd msr-safe
+make
+
+
+ctrl-a p #previous shell or 0 would have worked too -- to get to root terminal
+
+
+go to msr-dir
+insmod ./msr-safe.ko
+
+lsmod #all kernel modules
+
+cd /dev/cpu
+
+chown ubuntu.ubuntu msr_*
+
+ls -l ? # question mark = any single character
+chown ubuntu.ubuntu ?/msr_safe
+
+ctrl-a 1 # change terminal
+
+cd ../hw
+make interpose
+make hw
+make run
+
+go to other terminal
+cd msr-safe/
+cd whitelists/
+
+
+##
+cat /proc/cpu
+##
+
+cat wl_0646 > /dev/cpu/msr_whitelist
+
+make run > data.out
+cat data.out | grep RRR > data.R
+
+R
+d<-read.table("data.R", header=T)
+names(d)
+plot(d$aperf)
+plot(d$mperf)
+plot(d$aperf, d$mperf) ## aperf, mperf delayed at a similar amount
+summary(d$mperf)
+length(d$mperf)
+delta_mperf <- d$mperf[2:264] - d$mperf[1:263]  #second, total - first, total-1
+
+summary(delta_mperf)
+plot(delta_mperf)
+
+##thought to change signal intervals
+
+##change to libvariorum
+
+
+$ cd libvariorum/
+    $ mkdir build && mkdir install
+    $ cd build/
+    $ cmake -DCMAKE_INSTALL_PREFIX=../install ../src
+    $ make
+    $ make install
+
+
+  ./build/examples/ex-dump-clock-speed
+  #doesnt work too fix:
+
+  emacs ../../src/variorum/config_architecture.c
+
