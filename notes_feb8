@@ -85,5 +85,9 @@ $ cd libvariorum/
   ./build/examples/ex-dump-clock-speed
   #doesnt work too fix:
 
-  emacs ../../src/variorum/config_architecture.c
+change in the intel dir the config
+config_intel.c
+Create another else if for g_platform.intel and change it to the correct number
+
+rebuild
 
