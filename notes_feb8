@@ -91,3 +91,9 @@ Create another else if for g_platform.intel and change it to the correct number
 
 rebuild
 
+
+./ex-dump-clock-speed
+
+
+
+GET A GRAPH of something....perhaps temperature changes as firestarter runs?
