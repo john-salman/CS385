@@ -10,3 +10,37 @@ all hex
 
 3b
 power unit register
+
+rdmsr 0x606 --bitfield 3:0 => 3
+rdmsr 0x606 --bitfield 12:8 => e
+rdmsr 0x606 --bitfield 19:16 => a
+
+rdmsr  --decimal 0x611 --bitfield 31:0
+
+
+41648
+
+sleeping energy => 2.54
+
+____
+
+
+270447668
+277625635
+
+firestarter energy => 43.81
+
+
+
+
+
+r
+x<-rnorm(10000)
+y<-rnorm(10000)
+plot(x, y, pch=".")
+png("mygraph.png")
+plot(x, y, pch=".")
+dev.off()
+q()
+
+file should save in pwd
