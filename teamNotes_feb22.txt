@@ -1,0 +1,18 @@
+To do:
+Look at delta power_energy_status (0x611)
+  - register increments to show total energy consumption since last
+    clearing of registers.
+  - bits 0-31
+  
+Look at MSR_PP0_POWER_LIMIT (0x610)
+  -bits 0-14 (power limit actual)
+       + showing 800 for us
+  - read the og with firestarter
+  - modify dem bits yo
+  - run again with the firestarter
+  
+  Results:
+    OG: 800->57314557
+    New1: 500->60881428
+    New2: 80->20780329
+   
