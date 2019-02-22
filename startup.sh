@@ -29,7 +29,7 @@ sudo apt-get install apt-transport-https
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
 
 sudo apt-get update
-sudo apt-get install apt-get install gnome-tweak-tool vim-nox msr-tools cmake libhwloc-dev sublime-text
+sudo apt-get install gnome-tweak-tool vim-nox msr-tools cmake libhwloc-dev sublime-text
 
 
 # Set up msr-safe
