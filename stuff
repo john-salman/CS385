@@ -1,0 +1,23 @@
+384b000148320 === PKG_POWER_LIMIT register pg 507
+a0e03 === RAPL_POWER_UNIT 506
+
+using bit 0-3 we can determine the watt mulitplier (which is 1/8)
+using bit 16-19 of 506 we can determine the time multiplier of bitfield 17-23 of 507.
+
+Time limit = 2^Y * (1.0 + Z/4.0) * Time_Unit of 507 (bits 17-23)
+2^5 * (1.0 + Z/4.0) * TIME_UNIT
+2^5 * (1.0 + 0) * 976 microseconds
+
+WHERE DOES THAT THERE 20 FIT IN?!
+
+
+10100000111000000011
+010
+
+
+
+
+0000000000000011100001001011000000000000000101001000001100100000
+
+000101
+
