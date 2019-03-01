@@ -1,0 +1,32 @@
+0x610: MSR_PKG_POWER_LIMIT = 0x384b00011483e8
+0x606: MSR_RAPL_POWER_UNIT = 00000000000a0e03
+
+1/2^TIME_UNIT
+time unit = 10 because that bit in the RAPL_POWER_UNIT is a which is 10.
+1/1024 seconds
+
+
+Power Limit #1 is bits 0-14 of PKG_POWER_LIMIT
+83e8 is bits 0-15
+the 8 = 1000 in binary
+1  0   0  0
+15 14 13 12
+
+
+just use 00 not the 10.
+
+so the hex value becomes 03e8
+which is 1000 eigths of a watt.
+power limit = 125 watts (1000/8)
+
+
+TIME Limit field:
+0x384b00011483e8
+
+bitmask to find the 17-23:
+0x7F
+
+in c: (data is the register value)
+mask = 0x7F << 17;
+value = data&mask;
+value = value >> 17;

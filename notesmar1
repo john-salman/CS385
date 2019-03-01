@@ -30,3 +30,39 @@ in c: (data is the register value)
 mask = 0x7F << 17;
 value = data&mask;
 value = value >> 17;
+
+
+START ASSIGNMENT INFO
+Assignment for next Friday at 8pm
+- 50 runs of FIRESTARTER @ 50 different power bounds (mostly useful & limit firestarter runs to 10 seconds each with all cores)
+- Measure end to end iterations (reported by FIRESTARTER option)
+Average Power (end to end)
+Total Instructions Retired
+Total Actual cycles (APERF)
+
+4 graphs 
+Power limit on x axis
+observed on the Y axis
+
+Finally, (All sampled at 10 ms)
+Instructions Retired
+Cycles w/ 2, 3, 4 instructions retired
+Instructions per cycle
+(Record reference cycles)
+Graph:
+x axis Actual Time
+y Axis observed
+
+
+7 Graphs Total..
+
+
+END ASSIGNMENT INFO
+
+
+
+
+
+========================================================================
+
+Figure 18-1. Layout of IA32_PERFEVTSELx MSRs Page 190 of vol 3b 
