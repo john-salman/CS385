@@ -211,5 +211,12 @@ int __libc_start_main(
     // Find the real __libc_start_main() and call it.
     // Note that typeof is used instead of typedef.
     typeof(&__libc_start_main) orig = dlsym(RTLD_NEXT, "__libc_start_main");
-    return orig(main_hook, argc, argv, init, fini, rtld_fini, stack_end);
+
+    int return_value_orig = orig(main_hook, argc, argv, init, fini, rtld_fini, stack_end);
+
+    //disable counters
+    //read MSRS again
+
+    return return_value_orig
+
 }
